@@ -1,0 +1,83 @@
+ <html><head>
+    <title id="title">Moonlight</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+    <link rel="stylesheet" type="text/css" href="https://howtoscratch.info/src/css/index.css">
+    <link rel="stylesheet" type="text/css" href="https://howtoscratch.info/src/css/animations.css">
+    <link rel="stylesheet" type="text/css" href="https://howtoscratch.info/index.css">
+    <link rel="icon" href="https://howtoscratch.info/src/static/images/moon-light-moon-background.png" id="favicon">
+<body>
+        <div class="header sticky" id="header">
+        <img style="position: fixed; top: 3px; left: 3px; width: 2.5vw; height: 5vh;" src="https://howtoscratch.info/src/static/images/panic.png" alt="~ For Panic" title="Panic key">
+        <a class="headerbutton currentselection" href="/" title="Home" id="navhome"><!--<span class="material-symbols-outlined" title="Home">
+home
+</span>-->Home</a>
+        <a class="headerbutton" href="https://howtoscratch.w3spaces.com/#m" title="Games" id="navgames"><!--<span class="material-symbols-outlined" title="Games">
+stadia_controller
+</span>-->Games</a>
+        <a class="headerbutton" href="https://howtoscratch.w3spaces.com/settings" id="navsetting"><!--<span class="material-symbols-outlined" title="Games">
+settings
+</span>-->Settings</a>
+        <a class="headerbutton" onclick="window.location.href='https://search.'+window.location.hostname" id="navproxy"><!--<span class="material-symbols-outlined" title="Games">
+proxy
+</span>-->Proxy</a>
+        <a class="headerbutton" href="https://howtoscratch.info/partner" id="navpartner"><!--<span class="material-symbols-outlined" title="Games">
+settings
+</span>-->Partners</a>
+
+    </div>
+    <div style="width: 3px; height: 6vh;"></div>
+    <h1 style="text-align: center;">Settings</h1>
+    <br>
+    <h3 style="text-align: center;">Icon and tab cloak</h3>
+    <br>
+    <p style="text-align: center;">Tab cloak:</p>
+    <br>
+    <p style="text-align: center;"><input onchange="updatetab(this.value)" placeholder="Classroom" class="settingsinput" id="updatetab"></p>
+    <br>
+    <br>
+    <p style="text-align: center;">Icon cloak:</p>
+    <br>
+    <p style="text-align: center;"><input onchange="updateicon(this.value)" placeholder="https://classroom.google.com/image.png" class="settingsinput" id="updateicon"></p>
+    <br>
+    <p style="text-align: center;">Panic button link <span style="font-size: 13px; font-style: italic;">(this is where you go when you click shift+c, default is Google Classroom)</span>  :</p>
+    <br> 
+    <p style="text-align: center;"><input onchange="updatepanic(this.value)" placeholder="https://classroom.google.com/" class="settingsinput" id="updatepanic"></p>
+    <br>
+    <p class="center">Cloaks: <button onclick="updatetab('Classes'); updateicon('https://howtoscratch.info/settings/icons/classroom.png'); location.reload()">Google Classroom</button>
+    <button onclick="updatetab('My Drive - Google Drive'); updateicon('/https://howtoscratch.infosettings/icons/drive.png'); location.reload()">Google Drive</button>
+    <button onclick="updatetab('New Tab'); updateicon('https://howtoscratch.info/settings/icons/newtab.png'); location.reload()">New Tab</button>
+    <button onclick="updatetab('Iready'); updateicon('https://howtoscratch.info/settings/icons/iready.png'); location.reload()">Iready</button>
+    <button onclick="updatetab('Moonlight'); updateicon('https://howtoscratch.info/src/static/images/moon-light-moon-background.png'); location.reload()">Moonlight/Default</button></p>
+    <div style="width: vw; height: 5vw"></div>
+    <p style="text-align: center"><button onclick="lightmodetoggle(); window.location.reload()">Toggle light mode</button></p>
+    <h3 class="center">Choose a background</h3>
+    <div id="bg-choose" style="margin: auto; width: 60%;">
+        <p style="text-align: center"></p><p style="display: inline-block;">Background color:</p><input type="color" value="#0000FF" onchange="localStorage.setItem('backdrop-image', 'color'); localStorage.setItem('backdrop-color', this.value);"><button onclick="localStorage.setItem('backdrop-image', ''); localStorage.setItem('backdrop-color', null);">Reset</button><br><br><p>Background image:</p>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop1.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop1.jpg)'); localStorage.setItem('backdrop-image-license', '1');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop2.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop2.jpg)'); localStorage.setItem('backdrop-image-license', '2');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop3.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop3.jpg)'); localStorage.setItem('backdrop-image-license', '3');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop4.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop4.jpg)'); localStorage.setItem('backdrop-image-license', '4');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop5.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop5.jpg)'); localStorage.setItem('backdrop-image-license', '5');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop6.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop6.jpg)'); localStorage.setItem('backdrop-image-license', '6');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop7.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop7.jpg)'); localStorage.setItem('backdrop-image-license', '7');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop8.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop8.jpg)'); localStorage.setItem('backdrop-image-license', '8');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop9.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop9.jpg)'); localStorage.setItem('backdrop-image-license', '9');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop10.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop10.jpg)'); localStorage.setItem('backdrop-image-license', '10');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop11.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop11.jpg)'); localStorage.setItem('backdrop-image-license', '11');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop12.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop12.jpg)'); localStorage.setItem('backdrop-image-license', '12');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop13.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop13.jpg)'); localStorage.setItem('backdrop-image-license', '13');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop14.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop14.jpg)'); localStorage.setItem('backdrop-image-license', '14');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop15.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop15.jpg)'); localStorage.setItem('backdrop-image-license', '15');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop16.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop16.jpg)'); localStorage.setItem('backdrop-image-license', '16');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop17.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop17.jpg)'); localStorage.setItem('backdrop-image-license', '17');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop18.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop18.jpg)'); localStorage.setItem('backdrop-image-license', '18');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop19.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop19.jpg)'); localStorage.setItem('backdrop-image-license', '19');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/backdrop20.jpg')" onclick="localStorage.setItem('backdrop-image', 'url(/src/static/backdrop/backdrop20.jpg)'); localStorage.setItem('backdrop-image-license', '20');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+        <div class="bg-choose" style="background-image: url('https://howtoscratch.info/src/static/backdrop/choose-random.jpg')" onclick="localStorage.setItem('backdrop-image', '');"><div class="bg-choose-overlay"><div style="width:3px; height: 5vh;"></div>Set Background</div></div>
+    </div>
+    
+    <script src="https://howtoscratch.info/src/js/iconsetter.js"></script>
+    <script src="https://howtoscratch.info/src/js/index.js"></script>
+    <script src="/https://howtoscratch.info/src/js/iconloader.js"></script> 
+
+<script src="//cdn.jsdelivr.net/npm/eruda"></script></body><div id="eruda" style="all: initial;"></div><div class="__chobitsu-hide__" style="all: initial;"></div></html>
